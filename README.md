@@ -4,7 +4,8 @@ Minimal examples to check selected libraries from "Proposed options for simulato
 
 ## Roadmap
 
-- [ ] MQTT with JSON payload
+- [x] MQTT
+  - Industrial Communication Toolbox doesn't include any Simulink blocks, corroborated by existence of a [commercial option](https://www.speedgoat.com/products/mqtt-client)
 - [ ] Data Distribution Service
 - [ ] ZeroMQ
 - [ ] MAVLink
@@ -22,3 +23,5 @@ pip install -r requirements.txt
 Windows installer for [Mosquitto](https://mosquitto.org/download/)
 
 Add installation folder to `Path` environment variable, default `C:/Program Files/mosquitto`
+
+Install "Industrial Communication Toolbox" in MATLAB
