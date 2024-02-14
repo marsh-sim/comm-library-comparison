@@ -34,3 +34,24 @@ Install "Industrial Communication Toolbox" in MATLAB
 
 To avoid compiling the [CycloneDDS](https://github.com/eclipse-cyclonedds) C library from source, you need to use a Python version for which there are [prebuilt binaries on pip](https://pypi.org/project/cyclonedds/#files) available.
 At the time of writing this were CPython versions 3.7 to 3.10 (inclusive).
+
+## Results for ZeroMQ
+
+- The method for building `libzmq` in the post is deprecated, now CMake has to be used
+- Generated project with CMake GUI for Visual Studio 2022
+- Build initially failed, v143 build tools weren't detected, changed to v142 (for VS 2019) in each project properties
+- After succeeded build, copied `/libs/libzmq/build/bin/Release/libzmq-v143-mt-4_3_6.dll` to some directory in system `Path` and renamed to `libzmq.dll`
+- had to modify `SimulinkCoSimulationExample/utils/SetEnvVariable.m`, `buildCoSimExample.m` and `buildCommExample.m` because they hardcoded the path from deprecated build script
+- `startCoSimServer` shortcut just opens empty command prompt
+- The model opened with "Co-Simulation Client Example" errors with the following error.
+  - The path in error message does contain a file compiled in one of the previous steps
+  - As suggested by this [StackOverflow comment](https://stackoverflow.com/a/15339283/8531075), this can be an issue with any DLL not being found
+
+```
+=== Simulation (Elapsed: 2 sec) ===
+    Error:Error while obtaining sizes from MEX S-function 'statcalsfcngateway' in 'clientModel/EWMA_97_CoSim'.
+    Caused by:
+        Invalid MEX-file 'C:\Workspace\My-Repos\comm-library-comparison\SimulinkCoSimulationExample\CoSimExample\sfun\statcalsfcngateway.mexw64': The specified module could not be found.
+```
+
+- Same error with different `.mexw64` files appears on running every model included in the example project
