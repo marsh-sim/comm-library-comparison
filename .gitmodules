@@ -1,9 +1,9 @@
-[submodule "SimulinkCoSimulationExample"]
-	path = SimulinkCoSimulationExample
+[submodule "zeromq/SimulinkCoSimulationExample"]
+	path = zeromq/SimulinkCoSimulationExample
 	url = https://github.com/mathworks/SimulinkCoSimulationExample.git
-[submodule "libs/libzmq"]
-	path = libs/libzmq
+[submodule "zeromq/libzmq"]
+	path = zeromq/libzmq
 	url = https://github.com/zeromq/libzmq.git
-[submodule "libs/cppzmq"]
-	path = libs/cppzmq
+[submodule "zeromq/cppzmq"]
+	path = zeromq/cppzmq
 	url = https://github.com/zeromq/cppzmq.git
