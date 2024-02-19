@@ -9,7 +9,7 @@ parser.add_argument('-p', '--port', type=int,
                     help='UDP port to send on', default=24000)
 args = parser.parse_args()
 
-connection_string = f'udpbcast:127.0.0.1:{args.port}'
+connection_string = f'mcast:239.255.145.50:{args.port}'
 mav = mavutil.mavlink_connection(connection_string)
 print(f'Sending to {connection_string}')
 
