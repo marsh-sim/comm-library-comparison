@@ -1,7 +1,7 @@
 import argparse
 from pymavlink import mavutil
 
-parser = argparse.ArgumentParser('send_manual.py')
+parser = argparse.ArgumentParser()
 parser.add_argument('-p', '--port', type=int,
                     help='UDP port to listen on', default=24000)
 args = parser.parse_args()

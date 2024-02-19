@@ -4,7 +4,7 @@ from pymavlink import mavutil
 import pymavlink.dialects.v20.common as mavlink
 from time import sleep
 
-parser = argparse.ArgumentParser('send_manual.py')
+parser = argparse.ArgumentParser()
 parser.add_argument('-p', '--port', type=int,
                     help='UDP port to send on', default=24000)
 args = parser.parse_args()
