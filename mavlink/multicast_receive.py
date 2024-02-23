@@ -3,7 +3,7 @@ from pymavlink import mavutil
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-p', '--port', type=int,
-                    help='UDP port to listen on', default=24000)
+                    help='UDP port to listen on', default=24400)
 args = parser.parse_args()
 
 connection_string = f'mcast:239.255.145.50:{args.port}'

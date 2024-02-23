@@ -7,7 +7,7 @@ from time import sleep, time
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-p', '--port', type=int,
-                    help='UDP port to send to', default=24000)
+                    help='UDP port to send to', default=24400)
 args = parser.parse_args()
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
