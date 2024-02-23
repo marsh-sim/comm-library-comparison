@@ -14,9 +14,9 @@ Minimal examples to check selected libraries from "Proposed options for simulato
   - Successful, but complicated setup with compiling extensions for Simulink. No specific information is given on failure to load a module
   - Based on a [blog post by a MathWorks employee](https://blogs.mathworks.com/simulink/2018/05/01/communicating-with-an-external-application-for-co-simulation/)
     - The method for building `libzmq` in the post is deprecated, now CMake has to be used
-- [ ] MAVLink
+- [x] MAVLink
   - Available since MATLAB R2019a
-  - Installation in Simulink requires only UAV Toolbox, and a toolbox for UDP
+  - Installation in Simulink requires only UAV Toolbox, and a Instrument Control Toolbox for UDP blocks
 
 ## Installation
 
